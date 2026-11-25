@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de Juegos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #3b5f96de;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    p.subtitulo {
+      color: #e0c3fc;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    /* Contenedor en cuadrícula */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    /* Tarjetas de juego */
+    .card {
+      background-color: #6a3074;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+      border-color: #ff0303;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #3a1740;
+    }
+
+    .contenido {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .contenido h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    /* Botón de Jugar */
+    .btn-jugar {
+      display: inline-block;
+      background-color: #ff9a03;
+      color: #2b0f30;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 24px;
+      border-radius: 25px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-jugar:hover {
+      background-color: #fb8500;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Menú de Juegos</h1>
+  <p class="subtitulo">Selecciona un juego para comenzar</p>
+
+  <div class="container">
+    
+    <!-- Juego 1 -->
+    <div class="card" onmouseenter="reproducirAudio2()" onclick="location.href='memorama.html'">
+      <img src="https://thumbnails.genially.com/64a1f90e57700e0018ed9df0/screenshots/65b66fdc-5ace-455f-9619-b7ea25118fa4.jpg" alt="Memorama con imágenes">
+      <div class="contenido">
+        <h3>Memorama con imágenes</h3>
+        <a href="memorama.html" class="btn-jugar">Jugar</a>
+      </div>
+    </div>
+
+    <!-- Juego 2 -->
+    <div class="card" onmouseenter="reproducirAudio1()" onclick="location.href='saltar.html'">
+      <img src="https://th.bing.com/th/id/OIP.LfPudb48bTvv77D22EyTJgHaGL?w=202&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Aventura Hñähñu">
+      <div class="contenido">
+        <h3>🌸 AVENTURA HÑÄNHU 🌸</h3>
+        <a href="saltar.html" class="btn-jugar">Jugar</a>
+      </div>
+    </div>
+
+    <!-- Juego 3 -->
+    <div class="card" onmouseenter="reproducirAudio3()" onclick="location.href='completar.html'">
+      <img src="https://th.bing.com/th/id/OIP.iy5yMnBqM7lsyaaFHOjy6QHaJ8?w=203&h=273&c=7&r=0&o=7&pid=1.7&rm=3">
+      <div class="contenido">
+        <h3>Completa palabras en Otomi</h3>
+        <a href="completar.html" class="btn-jugar">Jugar</a>
+      </div>
